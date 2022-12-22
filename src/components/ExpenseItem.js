@@ -1,4 +1,11 @@
+import { useState, useRef } from "react";
+
 function ExpenseItem(props) {
+  //const [x,setX] =useState()
+  // const myState = useState();
+  // const x = myState[0];
+  // const setX = myState[1];
+
   function formatDate(date) {
     date = new Date(date);
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;

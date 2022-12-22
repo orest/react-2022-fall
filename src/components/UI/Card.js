@@ -7,9 +7,12 @@ const Card = (props) => {
     cardClass = `card mt-${props.margin}`;
   }
 
+  let className = "card-header";
+  if (props.bg) className = `${className} bg-${props.bg}`;
+  if (props.color) className = `${className} text-${props.color}`;
   return (
     <div className={cardClass}>
-      <div className="card-header">{props.title} </div>
+      <div className={className}>{props.title} </div>
       <div className="card-body">{props.children}</div>
     </div>
   );
